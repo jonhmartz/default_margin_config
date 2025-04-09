@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="menu_margin_config_root" name="Configuración de Margen" sequence="10"/>
+    <record id="action_margin_config" model="ir.actions.act_window">
+        <field name="name">Configuración de Utilidad</field>
+        <field name="res_model">default.margin.config</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_margin_config_form"/>
+    </record>
+    <menuitem id="menu_margin_config" name="Configuración de Utilidad" parent="menu_margin_config_root" action="action_margin_config"/>
+</odoo>

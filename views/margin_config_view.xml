@@ -12,14 +12,4 @@
             </form>
         </field>
     </record>
-
-    <record id="action_margin_config" model="ir.actions.act_window">
-        <field name="name">Configuración de Utilidad</field>
-        <field name="res_model">default.margin.config</field>
-        <field name="view_mode">form</field>
-        <field name="target">current</field>
-    </record>
-
-    <menuitem id="menu_margin_config_root" name="Configuración Utilidad"/>
-    <menuitem id="menu_margin_config" name="Configuración de Utilidad" parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
