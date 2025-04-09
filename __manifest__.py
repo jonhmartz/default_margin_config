@@ -1,17 +1,15 @@
 {
-    "name": "Utilidad por Defecto",
+    "name": "Default Margin Config",
     "version": "1.0",
-    "summary": "Define una utilidad por defecto que se usa en ventas y cotizaciones",
-    "category": "Sales",
-    "author": "TuNombre",
-    "license": "LGPL-3",
     "depends": ["sale"],
+    "author": "jonhmartz",
+    "category": "Sales",
+    "description": "Módulo para definir utilidad por defecto y aplicarla en ventas.",
     "data": [
         "security/ir.model.access.csv",
         "views/margin_config_view.xml",
-        "views/sale_order_view.xml",
         "views/sale_order_line_view.xml"
     ],
     "installable": True,
-    "application": True
+    "license": "LGPL-3"
 }

@@ -1,17 +1,3 @@
 <odoo>
-<record id="view_order_form_inherit_margin_lines" model="ir.ui.view">
-    <field name="name">sale.order.line.form.margin</field>
-    <field name="model">sale.order.line</field>
-    <field name="inherit_id" ref="sale.view_order_form"/>
-    <field name="arch" type="xml">
-        <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
-            <field name="utilidad_linea"/>
-            <field name="importe_utilidad"/>
-        </xpath>
-        <xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="after">
-            <field name="utilidad_linea"/>
-            <field name="importe_utilidad"/>
-        </xpath>
-    </field>
-</record>
+    <!-- La vista relacionada a las líneas de pedido se definirá más adelante o se hereda desde el core -->
 </odoo>
