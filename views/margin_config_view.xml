@@ -3,7 +3,7 @@
         <field name="name">default.margin.config.form</field>
         <field name="model">default.margin.config</field>
         <field name="arch" type="xml">
-            <form string="Configuración de Utilidad">
+            <form>
                 <sheet>
                     <group>
                         <field name="utilidad"/>
@@ -12,4 +12,14 @@
             </form>
         </field>
     </record>
+
+    <menuitem id="menu_margin_config_root" name="Configuración de Utilidad"/>
+    <menuitem id="menu_margin_config" name="Configurar Utilidad" parent="menu_margin_config_root"/>
+    <record id="action_margin_config" model="ir.actions.act_window">
+        <field name="name">Configuración de Utilidad</field>
+        <field name="res_model">default.margin.config</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_margin_config_form"/>
+    </record>
+    <menuitem id="menu_margin_config_form" name="Editar" parent="menu_margin_config" action="action_margin_config"/>
 </odoo>

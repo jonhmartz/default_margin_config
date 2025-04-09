@@ -1,15 +1,14 @@
 {
-    "name": "Default Margin Config",
+    "name": "Configuración de Utilidad por Defecto",
     "version": "1.0",
-    "depends": ["sale"],
-    "author": "TuNombre",
     "category": "Sales",
-    "description": "Configura una utilidad por defecto para líneas de ventas.",
+    "summary": "Permite configurar una utilidad por defecto para ventas",
+    "author": "Tu Empresa",
+    "depends": ["base", "sale"],
     "data": [
         "security/ir.model.access.csv",
         "views/margin_config_view.xml",
-        "views/sale_order_line_view.xml",
-        "views/menu.xml"
+        "views/sale_order_line_view.xml"
     ],
     "installable": True,
     "application": True,
