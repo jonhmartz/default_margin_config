@@ -13,9 +13,6 @@
         </field>
     </record>
 
-    <menuitem id="menu_margin_config_root" name="Utilidad" sequence="10"/>
-    <menuitem id="menu_margin_config" name="Configuración de Utilidad" parent="menu_margin_config_root" action="action_margin_config"/>
-
     <record id="action_margin_config" model="ir.actions.act_window">
         <field name="name">Configuración de Utilidad</field>
         <field name="res_model">default.margin.config</field>
@@ -25,4 +22,7 @@
             <p>Define el porcentaje de utilidad predeterminado que se aplicará a las cotizaciones y ventas.</p>
         </field>
     </record>
+
+    <menuitem id="menu_margin_config_root" name="Utilidad" sequence="10"/>
+    <menuitem id="menu_margin_config" name="Configuración de Utilidad" parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
