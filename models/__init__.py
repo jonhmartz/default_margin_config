@@ -1,1 +1,1 @@
-from . import default_margin_config, sale_order_line
+from . import default_margin_config
