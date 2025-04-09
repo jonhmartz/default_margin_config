@@ -1,17 +1,15 @@
-
 {
     "name": "Default Margin Config",
     "version": "1.0",
-    "depends": ["sale"],
+    "depends": ["base"],
     "author": "ChatGPT",
     "category": "Sales",
-    "license": "LGPL-3",
-    "description": "Define utilidad por defecto y úsala en líneas de venta.",
+    "description": "Permite configurar una utilidad por defecto para las líneas de venta.",
     "data": [
         "security/ir.model.access.csv",
-        "views/margin_config_view.xml",
-        "views/sale_order_line_view.xml"
+        "views/margin_config_view.xml"
     ],
+    "license": "LGPL-3",
     "installable": True,
-    "application": True
+    "auto_install": False,
 }
