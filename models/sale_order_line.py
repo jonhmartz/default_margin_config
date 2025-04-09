@@ -1,32 +1,25 @@
+
 from odoo import models, fields, api
 
 class SaleOrderLine(models.Model):
-    _inherit = "sale.order.line"
+    _inherit = 'sale.order.line'
 
-    utilidad_linea = fields.Float(string="Utilidad (%)")
-    importe_utilidad = fields.Monetary(
-        string="Importe con Utilidad",
-        currency_field='currency_id',
-        compute="_compute_importe_utilidad",
-        store=True
-    )
+    utilidad = fields.Integer(string="Utilidad (%)", default=0)
+    
+    @api.onchange('product_id')
+    def _onchange_product_id_set_margin(self):
+        config = self.env['default.margin.config'].search([], limit=1)
+        utilidad = config.utilidad if config else 0
+        self.utilidad = utilidad
+        if self.product_id:
+            self.price_unit = self.product_id.standard_price * (1 + (utilidad / 100))
 
-    @api.depends('product_uom_qty', 'price_unit')
-    def _compute_importe_utilidad(self):
+    @api.onchange('utilidad')
+    def _onchange_utilidad_update_price(self):
+        if self.product_id:
+            self.price_unit = self.product_id.standard_price * (1 + (self.utilidad / 100))
+
+    @api.onchange('price_unit', 'product_uom_qty')
+    def _compute_amount(self):
         for line in self:
-            line.importe_utilidad = line.product_uom_qty * line.price_unit
-
-    @api.onchange('product_id', 'product_uom_qty', 'order_id', 'utilidad_linea')
-    def _onchange_precio_por_utilidad(self):
-        for line in self:
-            if not line.product_id or not line.order_id:
-                return
-
-            costo = line.product_id.standard_price
-            utilidad = line.utilidad_linea or line.order_id.utilidad_predeterminada or 0
-
-            if utilidad < 100:
-                try:
-                    line.price_unit = round(costo / (1 - utilidad / 100), 2)
-                except ZeroDivisionError:
-                    line.price_unit = 0
+            line.price_subtotal = line.price_unit * line.product_uom_qty
