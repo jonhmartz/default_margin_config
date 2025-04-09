@@ -3,7 +3,7 @@
     "version": "1.0",
     "summary": "Define una utilidad por defecto que se usa en ventas y cotizaciones",
     "category": "Sales",
-    "author": "Damred",
+    "author": "TuNombre",
     "license": "LGPL-3",
     "depends": ["sale"],
     "data": [
