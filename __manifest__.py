@@ -1,15 +1,15 @@
-
 {
-    "name": "Configuración de Utilidad por Defecto",
+    "name": "Default Margin Config",
     "version": "1.0",
-    "depends": ["base", "sale"],
-    "author": "Tu Empresa",
+    "depends": ["sale"],
+    "author": "ChatGPT",
     "category": "Sales",
+    "description": "Configuración de utilidad por defecto para ventas",
     "data": [
         "security/ir.model.access.csv",
-        "views/margin_config_view.xml"
+        "views/margin_config_view.xml",
+        "views/sale_order_line_view.xml"
     ],
     "installable": True,
-    "application": True,
     "license": "LGPL-3"
 }

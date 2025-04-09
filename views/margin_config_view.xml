@@ -1,10 +1,9 @@
-
 <odoo>
     <record id="view_margin_config_form" model="ir.ui.view">
         <field name="name">default.margin.config.form</field>
         <field name="model">default.margin.config</field>
         <field name="arch" type="xml">
-            <form string="Configuración de Utilidad">
+            <form>
                 <sheet>
                     <group>
                         <field name="utilidad"/>
@@ -14,13 +13,13 @@
         </field>
     </record>
 
+    <menuitem id="menu_margin_config_root" name="Configuración Utilidad" sequence="10"/>
+    <menuitem id="menu_margin_config" name="Utilidad por Defecto" parent="menu_margin_config_root"/>
     <record id="action_margin_config" model="ir.actions.act_window">
         <field name="name">Configuración de Utilidad</field>
         <field name="res_model">default.margin.config</field>
         <field name="view_mode">form</field>
         <field name="target">current</field>
     </record>
-
-    <menuitem id="menu_margin_config_root" name="Utilidad"/>
-    <menuitem id="menu_margin_config" name="Configuración de Utilidad" parent="menu_margin_config_root" action="action_margin_config"/>
+    <menuitem id="menu_margin_config_form" name="Configuración" action="action_margin_config" parent="menu_margin_config"/>
 </odoo>
