@@ -1,13 +1,10 @@
 <odoo>
     <record id="view_order_form_inherit_margin_lines" model="ir.ui.view">
         <field name="name">sale.order.form.margin</field>
-        <field name="model">sale.order</field>
+        <field name="model">sale.order.line</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='order_line']/tree" position="inside">
-                <field name="utilidad"/>
-            </xpath>
-            <xpath expr="//field[@name='order_line']/form" position="inside">
+            <xpath expr="//tree[@string='Sales Order Lines']" position="inside">
                 <field name="utilidad"/>
             </xpath>
         </field>
