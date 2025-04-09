@@ -3,7 +3,7 @@
         <field name="name">default.margin.config.form</field>
         <field name="model">default.margin.config</field>
         <field name="arch" type="xml">
-            <form string="Configuración de Utilidad">
+            <form string="Configuración de Margen por Defecto">
                 <sheet>
                     <group>
                         <field name="utilidad"/>
@@ -20,7 +20,7 @@
         <field name="target">current</field>
     </record>
 
-    <menuitem id="menu_margin_config_root" name="Utilidad por Defecto" sequence="10"/>
+    <menuitem id="menu_margin_config_root" name="Margen Utilidad"/>
     <menuitem id="menu_margin_config" name="Configuración de Utilidad"
               parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
