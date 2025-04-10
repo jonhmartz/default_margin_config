@@ -2,9 +2,9 @@
     "name": "Configuración de Utilidad por Defecto",
     "version": "1.0",
     "depends": ["base", "sale"],
-    "author": "Tu Empresa",
+    "author": "damred",
     "category": "Sales",
-    "description": "Permite configurar una utilidad por defecto para las líneas de venta.",
+    "description": "Permite configurar y guardar una utilidad por defecto que se extrae en las líneas de venta.",
     "data": [
         "data/model_ir_data.xml",
         "security/ir.model.access.csv",
