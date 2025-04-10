@@ -1,0 +1,5 @@
+<odoo>
+    <record id="default_margin_config_record" model="default.margin.config">
+        <field name="utilidad">0.0</field>
+    </record>
+</odoo>
