@@ -1,15 +1,15 @@
 {
-    'name': 'Default Margin Config',
-    'version': '1.0',
-    'summary': 'Configuración de utilidad por defecto para ventas',
-    'category': 'Sales',
-    'author': 'TuNombre',
-    'license': 'LGPL-3',
-    'depends': ['base'],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/default_margin_config_view.xml',
+    "name": "Default Margin Config",
+    "version": "1.0",
+    "depends": ["sale"],
+    "author": "AutoGen",
+    "category": "Sales",
+    "description": "Configuración global de utilidad para ventas.",
+    "data": [
+        "security/ir.model.access.csv",
+        "views/margin_config_view.xml",
+        "views/sale_order_line_view.xml"
     ],
-    'installable': True,
-    'application': True,
+    "installable": True,
+    "application": True,
 }
