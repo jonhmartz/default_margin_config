@@ -1,0 +1,6 @@
+<odoo>
+    <record id="model_default_margin_config" model="ir.model">
+        <field name="name">default.margin.config</field>
+        <field name="model">default.margin.config</field>
+    </record>
+</odoo>
