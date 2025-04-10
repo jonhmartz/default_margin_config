@@ -1,20 +1,19 @@
 {
     "name": "Default Margin Config",
     "version": "1.0",
+    "summary": "Configura una utilidad por defecto para líneas de venta",
     "category": "Sales",
-    "summary": "Configura un porcentaje de utilidad por defecto para ventas",
-    "description": "Permite establecer un porcentaje de utilidad por defecto que se aplica en las líneas de venta.",
-    "author": "Tu Nombre o Empresa",
+    "author": "ChatGPT",
+    "license": "LGPL-3",
     "depends": ["sale"],
     "data": [
         "security/ir.model.access.csv",
-        "data/config_data.xml",
         "views/margin_config_view.xml",
+        "views/menu.xml",
         "views/sale_order_line_view.xml",
-        "views/menu.xml"
+        "data/model_data.xml"
     ],
-    "license": "LGPL-3",
     "installable": True,
-    "auto_install": False,
-    "application": True
+    "application": False,
+    "auto_install": False
 }

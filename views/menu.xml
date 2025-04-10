@@ -1,11 +1,5 @@
 <odoo>
-    <menuitem id="menu_margin_config_root" name="Configuraciones de Venta" sequence="10"/>
+    <menuitem id="menu_margin_config_root" name="Utilidad Config"/>
     <menuitem id="menu_margin_config" name="Utilidad por Defecto"
-              parent="menu_margin_config_root"
-              action="default_margin_config.action_margin_config"/>
-    <record id="action_margin_config" model="ir.actions.act_window">
-        <field name="name">Utilidad por Defecto</field>
-        <field name="res_model">default.margin.config</field>
-        <field name="view_mode">form</field>
-    </record>
+              parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
