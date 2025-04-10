@@ -1,12 +1,8 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 class DefaultMarginConfig(models.Model):
     _name = 'default.margin.config'
-    _description = 'Configuración de utilidad por defecto'
+    _description = 'Default Margin Config'
+    _rec_name = 'default_margin'
 
-    margin_percent = fields.Integer(string='Utilidad por Defecto (%)', default=0)
-
-    @api.model
-    def get_margin_percent(self):
-        config = self.search([], limit=1)
-        return config.margin_percent if config else 0
+    default_margin = fields.Float(string='Utilidad por defecto (%)', default=0.0)

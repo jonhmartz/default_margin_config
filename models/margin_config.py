@@ -1,14 +1,8 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
-class DefaultMarginConfig(models.Model):
-    _name = 'default.margin.config'
-    _description = 'Configuración de Margen'
+class MarginConfig(models.Model):
+    _name = "default.margin.config"
+    _description = "Configuración de utilidad por defecto"
+    _rec_name = "id"
 
-    utilidad = fields.Float(string="Utilidad por Defecto (%)", default=0)
-
-    @api.model
-    def get_singleton(self):
-        config = self.search([], limit=1)
-        if not config:
-            config = self.create({'utilidad': 0})
-        return config
+    porcentaje_utilidad = fields.Float(string="Utilidad por defecto (%)", default=0.0)
