@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id,perm_read,perm_write,perm_create,perm_unlink
-access_default_margin_config,access.default.margin.config,default_margin_config.model_default_margin_config,base.group_user,1,1,1,1
+access_default_margin_config,access.default.margin.config,model_default_margin_config,,1,1,1,1
 
