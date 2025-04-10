@@ -1,16 +1,12 @@
-<?xml version="1.0"?>
 <odoo>
-    <record id="view_sale_order_line_tree_inherit_margin" model="ir.ui.view">
-        <field name="name">sale.order.line.tree.margin</field>
-        <field name="model">sale.order.line</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='order_line']/tree" position="attributes">
-                <attribute name="editable">bottom</attribute>
-            </xpath>
-            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="after">
-                <field name="margin_percent"/>
-            </xpath>
-        </field>
-    </record>
+  <record id="view_sale_order_line_tree_inherit_margin" model="ir.ui.view">
+    <field name="name">sale.order.line.tree.margin</field>
+    <field name="model">sale.order.line</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='order_line']/tree" position="inside">
+        <field name="margin_percent"/>
+      </xpath>
+    </field>
+  </record>
 </odoo>

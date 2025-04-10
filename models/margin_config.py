@@ -1,8 +1,7 @@
 from odoo import models, fields
 
-class MarginConfig(models.Model):
-    _name = "default.margin.config"
-    _description = "Configuración de utilidad por defecto"
-    _rec_name = "id"
+class DefaultMarginConfig(models.Model):
+    _name = 'default.margin.config'
+    _description = 'Default Margin Configuration'
 
-    porcentaje_utilidad = fields.Float(string="Utilidad por defecto (%)", default=0.0)
+    margin_percent = fields.Float(string='Utilidad por Defecto', default=0.0)
