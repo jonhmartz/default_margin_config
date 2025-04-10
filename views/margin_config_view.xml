@@ -3,7 +3,7 @@
         <field name="name">default.margin.config.form</field>
         <field name="model">default.margin.config</field>
         <field name="arch" type="xml">
-            <form>
+            <form string="Configuración de Margen por Defecto">
                 <sheet>
                     <group>
                         <field name="utilidad"/>
@@ -17,7 +17,6 @@
         <field name="name">Configuración de Utilidad</field>
         <field name="res_model">default.margin.config</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_margin_config_form"/>
         <field name="target">current</field>
     </record>
 </odoo>

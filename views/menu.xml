@@ -1,4 +1,5 @@
 <odoo>
-    <menuitem id="menu_margin_config_root" name="Configuración de Margen"/>
-    <menuitem id="menu_margin_config" name="Utilidad por Defecto" parent="menu_margin_config_root" action="action_margin_config"/>
+    <menuitem id="menu_margin_config_root" name="Configuración de Ventas" sequence="10"/>
+    <menuitem id="menu_margin_config" name="Utilidad por Defecto"
+              parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
