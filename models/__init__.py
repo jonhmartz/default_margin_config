@@ -1,1 +1,1 @@
-from . import margin_config
+from . import default_margin_config
