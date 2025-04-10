@@ -1,4 +1,4 @@
 <odoo>
-    <menuitem id="menu_margin_config_root" name="Configuración Utilidad" sequence="10"/>
+    <menuitem id="menu_margin_config_root" name="Configuración de Utilidad"/>
     <menuitem id="menu_margin_config" name="Utilidad por Defecto" parent="menu_margin_config_root" action="action_margin_config"/>
 </odoo>
