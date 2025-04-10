@@ -1,6 +1,7 @@
-from odoo import models, fields
+
+from odoo import models, fields, api
 
 class SaleOrderLine(models.Model):
-    _inherit = 'sale.order.line'
+    _inherit = "sale.order.line"
 
-    margin_percent = fields.Float(string='Utilidad (%)')
+    utilidad = fields.Integer(string="Utilidad (%)", default=0)
